@@ -7,12 +7,14 @@ import TweetImage from '../components/Tweet/Tweetimage/TweetImage';
 function Home() {
   return (
     <main className="timeline">
-      <Header />
+      {/* <Header /> */}
+      {/*
       <EditorTweet />
       <TweetText />
       <TweetImage />
       <TweetText />
-      <TweetText />
+      */}
+       <TweetText />
     </main>
   );
 }
