@@ -9,7 +9,7 @@ function TweetTitle({name, times, hastag}){
             </svg>
             <p className='tweet-title-details'>
                 <span> {hastag} </span>
-                <span>.{times}</span>
+                <span>. {times}</span>
             </p>
 
         </>
