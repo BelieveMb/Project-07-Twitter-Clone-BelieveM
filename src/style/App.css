@@ -249,3 +249,7 @@ main{
     width: 1.5rem;
     color: #fff;
 }
+.active{
+    color: #1D9BF0;
+    border-bottom: 4px outset #fff;
+}

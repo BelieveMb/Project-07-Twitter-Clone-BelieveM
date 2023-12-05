@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import imageTwitter from "../../images/Twitter.svg";
 import imageHome from "../../images/Home-Fill.svg";
 import imageExplore from "../../images/Explore.svg";
@@ -7,12 +7,14 @@ import imageMessages from "../../images/Messages.svg";
 import imageBookmarks from "../../images/Bookmarks.svg";
 import imageProfile from "../../images/Profile.svg";
 import imageMore from "../../images/more.svg";
-import iconLock from "../../images/lock.svg";
 import imageProfil from "../../images/profile-photo.png";
 import NavMenu from './NavMenu';
+import {  NavLink } from "react-router-dom";
+
 
 function SideBar() {
   return (
+
     <div className='sidebar'> 
         <div className='topMenu'>
             
@@ -21,13 +23,35 @@ function SideBar() {
                 <img src={imageTwitter} alt="icon media" />
             </div>
 
-            <NavMenu titleMenu="Home" iconMenu={imageHome} />
-            <NavMenu titleMenu="Explore" iconMenu={imageExplore} />
-            <NavMenu titleMenu="Notifications" iconMenu={imageNotifications} />
-            <NavMenu titleMenu="Messages" iconMenu={imageMessages} />
-            <NavMenu titleMenu="Bookmarks" iconMenu={imageBookmarks} />
-            <NavMenu titleMenu="Profile" iconMenu={imageProfile} />
-            <NavMenu titleMenu="More" iconMenu={imageMore} /> 
+            <NavLink to='/' className={'linkMenu'}>
+                <NavMenu titleMenu="Home" iconMenu={imageHome} />
+            </NavLink>
+
+            <NavLink to='*'>
+                <NavMenu titleMenu="Explore" iconMenu={imageExplore} />
+            </NavLink>
+
+            <NavLink to='*'>
+                <NavMenu titleMenu="Notifications" iconMenu={imageNotifications} />
+            </NavLink>
+
+            <NavLink to='*'>
+               <NavMenu titleMenu="Messages" iconMenu={imageMessages} />
+            </NavLink>
+
+            <NavLink to='*'>
+                <NavMenu titleMenu="Bookmarks" iconMenu={imageBookmarks} />
+            </NavLink>
+
+            <NavLink to='/username'>
+                <NavMenu titleMenu="Profile" iconMenu={imageProfile} />
+            </NavLink>
+
+            <NavLink to='*'>
+                <NavMenu titleMenu="More" iconMenu={imageMore} /> 
+            </NavLink>
+
+
         </div>
 
 
@@ -41,10 +65,14 @@ function SideBar() {
             </div>
             <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> </style> <g> <circle class="st0" cx="55.091" cy="256" r="55.091"></circle> <circle class="st0" cx="256" cy="256" r="55.091"></circle> <circle class="st0" cx="456.909" cy="256" r="55.091"></circle> </g> </g></svg>
             
-           
+        
 
         </div>
     </div>
+        
+        
+    
+ 
   )
 }
 
