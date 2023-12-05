@@ -45,7 +45,7 @@ function SideBar() {
                 </h3>
                 <b>@username</b>
             </div>
-            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#500" stroke="#500"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{"fill:#fff;"} </style> <g> <circle class="st0" cx="55.091" cy="256" r="55.091"></circle> <circle class="st0" cx="256" cy="256" r="55.091"></circle> <circle class="st0" cx="456.909" cy="256" r="55.091"></circle> </g> </g></svg>
+            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> </style> <g> <circle class="st0" cx="55.091" cy="256" r="55.091"></circle> <circle class="st0" cx="256" cy="256" r="55.091"></circle> <circle class="st0" cx="456.909" cy="256" r="55.091"></circle> </g> </g></svg>
             
            
 
