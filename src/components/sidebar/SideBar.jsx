@@ -1,15 +1,28 @@
 import React from 'react'
-import imageAvatar from '../../../images/profile-photo.png';
-import imageMedia from "../../../images/Media.png";
-import imageGif from "../../../images/Gif.png";
-import imagePoll from "../../../images/Poll.png";
-import imageSmile from "../../../images/Emoji.png";
-import imageSchedule from "../../../images/Schedule.png";
+import imageMedia from "../../images/Media.png";
 
 function SideBar() {
   return (
     <div className='sidebar'> 
+        <div className="iconText">
+            <img src={imageMedia} alt="icon media" />
+            <h3>Media</h3>
+        </div>
 
+        <div className="iconText">
+            <img src={imageMedia} alt="icon media" />
+            <h3>Media</h3>
+        </div>
+
+        <div className="iconText">
+            <img src={imageMedia} alt="icon media" />
+            <h3>Media</h3>
+        </div>
+
+        <div className="iconText">
+            <img src={imageMedia} alt="icon media" />
+            <h3>Media</h3>
+        </div>
     </div>
   )
 }

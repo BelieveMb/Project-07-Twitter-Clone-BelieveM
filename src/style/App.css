@@ -201,8 +201,16 @@ main{
 /******************style of sidebar*********************/
 .sidebar, 
 .rightbar{
+    position: fixed;
     border: 4px solid red;
     height: 100vh;
     width: 200px;
     padding-top: 2rem;
+}
+.iconText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
