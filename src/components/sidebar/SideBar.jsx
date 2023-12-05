@@ -4,8 +4,12 @@ import imageHome from "../../images/Home-Fill.svg";
 import imageExplore from "../../images/Explore.svg";
 import imageNotifications from "../../images/Notifications.svg";
 import imageMessages from "../../images/Messages.svg";
-import imageProfil from "../../images/profile-photo.png";
+import imageBookmarks from "../../images/Bookmarks.svg";
+import imageProfile from "../../images/Profile.svg";
+import imageMore from "../../images/more.svg";
 import iconLock from "../../images/lock.svg";
+import imageProfil from "../../images/profile-photo.png";
+import NavMenu from './NavMenu';
 
 function SideBar() {
   return (
@@ -14,24 +18,16 @@ function SideBar() {
             
 
             <div className="iconText">
-                <img src={imageHome} alt="icon home" />
-                <h3>Home</h3>
+                <img src={imageTwitter} alt="icon media" />
             </div>
 
-            <div className="iconText">
-                <img src={imageExplore} alt="icon media" />
-                <h3>Explore</h3>
-            </div>
-
-            <div className="iconText">
-                <img src={imageNotifications} alt="icon media" />
-                <h3>Notification</h3>
-            </div>
-
-            <div className="iconText">
-                <img src={imageMessages} alt="icon media" />
-                <h3>Messages</h3>
-            </div>
+            <NavMenu titleMenu="Home" iconMenu={imageHome} />
+            <NavMenu titleMenu="Explore" iconMenu={imageExplore} />
+            <NavMenu titleMenu="Notifications" iconMenu={imageNotifications} />
+            <NavMenu titleMenu="Messages" iconMenu={imageMessages} />
+            <NavMenu titleMenu="Bookmarks" iconMenu={imageBookmarks} />
+            <NavMenu titleMenu="Profile" iconMenu={imageProfile} />
+            <NavMenu titleMenu="More" iconMenu={imageMore} /> 
         </div>
 
 

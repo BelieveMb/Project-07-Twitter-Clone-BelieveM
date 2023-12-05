@@ -1,9 +1,11 @@
 import React from 'react'
 
-function NavMenu() {
+function NavMenu({titleMenu, iconMenu}) {
   return (
     <div className="iconText">
-        <img src={imageTwitter} alt="logo twitter" />
+        <img src={iconMenu} alt="logo twitter" />
+        <h3>{titleMenu}</h3>
+
     </div>
   )
 }
