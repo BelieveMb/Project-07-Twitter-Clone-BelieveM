@@ -11,9 +11,7 @@ function SideBar() {
   return (
     <div className='sidebar'> 
         <div className='topMenu'>
-            <div className="iconText">
-                <img src={imageTwitter} alt="logo twitter" />
-            </div>
+            
 
             <div className="iconText">
                 <img src={imageHome} alt="icon home" />
