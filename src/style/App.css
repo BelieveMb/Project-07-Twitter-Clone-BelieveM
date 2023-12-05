@@ -251,5 +251,9 @@ main{
 }
 .active{
     color: #1D9BF0;
-    border-bottom: 4px outset #fff;
+    text-decoration: none;
+}
+.linkMenu{
+    color: #fff;
+    text-decoration: none;
 }

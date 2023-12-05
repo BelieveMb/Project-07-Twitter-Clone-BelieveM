@@ -1,8 +1,14 @@
 import React from 'react'
+import SideBar from '../components/sidebar/SideBar'
 
 function UserName() {
   return (
-    <div>UserName</div>
+    <>
+      
+      <SideBar />
+      <div>UserName</div>
+
+    </>
   )
 }
 

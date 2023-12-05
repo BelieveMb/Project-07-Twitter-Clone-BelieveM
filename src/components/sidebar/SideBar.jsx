@@ -23,15 +23,15 @@ function SideBar() {
                 <img src={imageTwitter} alt="icon media" />
             </div>
 
-            <NavLink to='/' className={'linkMenu'}>
-                <NavMenu titleMenu="Home" iconMenu={imageHome} />
+            <NavLink to='/' >
+                <NavMenu titleMenu="Home" iconMenu={imageHome} className={'linkMenu'} />
             </NavLink>
 
-            <NavLink to='*'>
+            <NavLink to='*' className={'linkMenu'}>
                 <NavMenu titleMenu="Explore" iconMenu={imageExplore} />
             </NavLink>
 
-            <NavLink to='*'>
+            <NavLink to='*' className={'linkMenu'}>
                 <NavMenu titleMenu="Notifications" iconMenu={imageNotifications} />
             </NavLink>
 
