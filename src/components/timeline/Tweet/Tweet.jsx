@@ -3,7 +3,7 @@ import TweetBody from "./TweetBody";
 import TweetTitle from "./TweetTitle";
 import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
-import { UsersList } from "../data/Tweets";
+import { UsersList } from "../../data/Tweets";
 
 
 function testImage(images, imageTweet){
