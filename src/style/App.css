@@ -217,6 +217,8 @@ main{
     align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    color: #fff;
+    text-decoration: none;
 }
 .topMenu{
     margin-bottom: 50%;
@@ -251,9 +253,5 @@ main{
 }
 .active{
     color: #1D9BF0;
-    text-decoration: none;
-}
-.linkMenu{
-    color: #fff;
     text-decoration: none;
 }
