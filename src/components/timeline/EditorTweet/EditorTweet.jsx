@@ -5,6 +5,8 @@ import imageGif from "../../images/Gif.png";
 import imagePoll from "../../images/Poll.png";
 import imageSmile from "../../images/Emoji.png";
 import imageSchedule from "../../images/Schedule.png";
+
+
 function EditorTweet() {
 
   return (
