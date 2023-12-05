@@ -207,6 +207,9 @@ main{
     width: 200px;
     padding-top: 2rem;
 }
+.rightbar{
+    right: 0;
+}
 .iconText{
     display: flex;
     justify-content: center;
