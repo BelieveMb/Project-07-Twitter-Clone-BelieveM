@@ -24,30 +24,30 @@ function SideBar() {
             </div>
 
             <NavLink to='/' >
-                <NavMenu titleMenu="Home" iconMenu={imageHome} className={'linkMenu'} />
+                <NavMenu titleMenu="Home" iconMenu={imageHome}  />
             </NavLink>
 
-            <NavLink to='*' className={'linkMenu'}>
+            <NavLink to='*' >
                 <NavMenu titleMenu="Explore" iconMenu={imageExplore} />
             </NavLink>
 
-            <NavLink to='*' className={'linkMenu'}>
+            <NavLink to='*' >
                 <NavMenu titleMenu="Notifications" iconMenu={imageNotifications} />
             </NavLink>
 
-            <NavLink to='*'>
+            <NavLink to='*' >
                <NavMenu titleMenu="Messages" iconMenu={imageMessages} />
             </NavLink>
 
-            <NavLink to='*'>
+            <NavLink to='*' >
                 <NavMenu titleMenu="Bookmarks" iconMenu={imageBookmarks} />
             </NavLink>
 
-            <NavLink to='/username'>
+            <NavLink to='/username'  >
                 <NavMenu titleMenu="Profile" iconMenu={imageProfile} />
             </NavLink>
 
-            <NavLink to='*'>
+            <NavLink to='*' >
                 <NavMenu titleMenu="More" iconMenu={imageMore} /> 
             </NavLink>
 
