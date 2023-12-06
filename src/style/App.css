@@ -229,6 +229,7 @@ main{
 .profilFollow{
     justify-content: start;
     font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
 .bottomProfil{
     gap: 1rem;
@@ -314,12 +315,13 @@ main{
 .followContent img{
     margin-right: 0.3rem;
 }
-
+.followContent svg{
+    width: 0.7rem;
+}
 .profilFollow .btnFollow{
     background: #fff;
     color: #2F3336;
     border-radius: 12rem;
     text-decoration: none;
     padding: 0.3rem 0.4rem;
-    /* margin-left: 2rem; */
 }
