@@ -1,6 +1,7 @@
 import React from 'react';
 import imageProfil from "../../images/profile-photo.png";
 import { UsersList } from '../data/Tweets';
+import Button from '../freeComponents/Button';
 
 function RightBar() {
 
@@ -60,7 +61,7 @@ function RightBar() {
                             </div>
                         </div>
 
-                        <a key={users.id} className='btnFollow'>Follow</a>            
+                        <Button btnContent={"Follow"}/>
                     </div>
                 ))
             }
