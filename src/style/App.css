@@ -227,7 +227,7 @@ main{
     align-items: start;
 }
 .profilFollow{
-    justify-content: start;
+    justify-content: space-between;
     font-size: 0.8rem;
     margin-bottom: 1rem;
 }
@@ -272,7 +272,7 @@ main{
 .trendBloc{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.2rem;
     padding: 1rem 0.4rem;
     width: 100%;
     background-color: #3c4044;
@@ -285,7 +285,7 @@ main{
     justify-content: space-between;
     align-content: start;
     row-gap: 4rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 1.2rem;
 }
 .trendTitle svg, .trendsHatag svg{
     width: 1.3rem;
@@ -312,13 +312,18 @@ main{
 .followContent{
     display: flex;
     flex-direction: row;
+    justify-content: start;
     row-gap: 0.2rem;
 }
 .followContent img{
-    margin-right: 0.3rem;
+    margin-right: 0.2rem;
+    width: 1.8rem;
 }
 .followContent svg{
     width: 0.7rem;
+}
+.followContent div h3{
+    font-size: 0.7rem;
 }
 .profilFollow .btnFollow{
     background: #fff;
