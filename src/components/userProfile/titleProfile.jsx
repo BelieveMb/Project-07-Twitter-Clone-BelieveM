@@ -1,9 +1,9 @@
 import React from 'react'
 
-function titleProfile() {
+function TitleProfile() {
   return (
-    <div>titleProfile</div>
+    <div>TitleProfle</div>
   )
 }
 
-export default titleProfile
+export default TitleProfile
