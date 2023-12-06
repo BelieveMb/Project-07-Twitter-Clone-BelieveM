@@ -333,3 +333,17 @@ main{
     padding: 0.3rem 0.4rem;
 }
 /******************style of UserProfile all components*********************/
+.titleProfile{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding-top: 1rem;
+}
+.titleProfile svg{
+    width: 1.9rem;
+    margin-left: 0.8rem;
+}
+.titleProfile span{
+    color: #6E767D;
+    font-weight: 200;
+}
