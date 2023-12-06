@@ -51,6 +51,9 @@ function SideBar() {
                 <NavMenu titleMenu="More" iconMenu={imageMore} /> 
             </NavLink>
 
+          <button className="button">Tweet</button>
+
+
 
         </div>
 

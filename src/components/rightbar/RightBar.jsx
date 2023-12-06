@@ -90,7 +90,7 @@ function RightBar() {
 
                 <a href="" className='btnFollow'>Follow</a>            
             </div>
-            
+
             <a href="" className='trendLink'>Show more</a>
 
 

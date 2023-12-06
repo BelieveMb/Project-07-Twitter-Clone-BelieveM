@@ -293,6 +293,8 @@ main{
 .trends{
     display: flex;
     flex-direction: column;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
 .trends b{
     color: #6E767D;
