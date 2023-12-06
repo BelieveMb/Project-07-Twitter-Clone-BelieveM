@@ -325,7 +325,7 @@ main{
 .followContent div h3{
     font-size: 0.7rem;
 }
-.profilFollow .btnFollow{
+.btnFollow{
     background: #fff;
     color: #2F3336;
     border-radius: 12rem;
@@ -346,4 +346,32 @@ main{
 .titleProfile span{
     color: #6E767D;
     font-weight: 200;
+}
+/***BannerProfile***/
+.bannerImage img{
+    width: 100%;
+}
+.profilPhoto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profilPhoto img{
+    border: 4px black solid;
+    border-radius: 0.6rem;
+    width: 20%;
+    margin-top: -7rem;
+    margin-left: 3rem;
+}
+.profilPhoto .btnAction{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.btnAction svg{
+    background-color: #1D9BF0;
+    border: 5px red solid;
+    font-size: 5rem;
 }
