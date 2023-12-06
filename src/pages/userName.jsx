@@ -9,7 +9,7 @@ function UserName() {
       
       <SideBar />
       <Layout>
-        <h2>Page profil</h2>
+        <h2>Page profi</h2>
       </Layout>
       <RightBar />
 
