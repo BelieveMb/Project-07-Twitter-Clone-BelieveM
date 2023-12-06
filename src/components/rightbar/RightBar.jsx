@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import imageProfil from "../../images/profile-photo.png";
 
 function RightBar() {
   return (
@@ -32,6 +33,26 @@ function RightBar() {
             </div>
 
             <a href="" className='trendLink'>Show more</a>
+        </div>
+
+        <div className="trendBloc">
+            <div className="trendTitle">
+                <h3>Who to follow</h3>
+            </div>
+
+            <div className="profilFollow">
+                <div className="followContent">
+                    <img src={imageProfil} alt="Image profil" className='avatarBottom' />
+                    
+                    <div>
+                        <h3>Twitter  
+                        </h3>
+                        <b>@username</b>
+                    </div>
+                </div>
+
+                <a href="" className='btnFollow'>Follow</a>            
+            </div>
         </div>
 
     </div>
