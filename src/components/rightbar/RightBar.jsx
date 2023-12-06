@@ -14,10 +14,24 @@ function RightBar() {
             </div>
 
             <div className="trends">
-                <b>Trending in Turkey</b>
+                <div className="trendsHatag">
+                    <b>Trending in Turkey</b>
+                    <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> </style> <g> <circle class="st0" cx="55.091" cy="256" r="55.091"></circle> <circle class="st0" cx="256" cy="256" r="55.091"></circle> <circle class="st0" cx="456.909" cy="256" r="55.091"></circle> </g> </g></svg>
+                </div>
                 <h4>#SQUID</h4>
                 <b>2,6000 Tweets</b>
             </div>
+
+            <div className="trends">
+                <div className="trendsHatag">
+                    <b>Trending in Turkey</b>
+                    <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> </style> <g> <circle class="st0" cx="55.091" cy="256" r="55.091"></circle> <circle class="st0" cx="256" cy="256" r="55.091"></circle> <circle class="st0" cx="456.909" cy="256" r="55.091"></circle> </g> </g></svg>
+                </div>
+                <h4>#SQUID</h4>
+                <b>2,6000 Tweets</b>
+            </div>
+
+            <a href="" className='trendLink'>Show more</a>
         </div>
 
     </div>
