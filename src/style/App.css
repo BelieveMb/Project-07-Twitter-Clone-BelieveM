@@ -279,7 +279,25 @@ main{
     justify-content: space-between;
     align-content: start;
     gap: 4rem;
+    margin-bottom: 1rem;
 }
-.trendTitle svg{
+.trendTitle svg, .trendsHatag svg{
     width: 1.3rem;
+}
+.trends{
+    display: flex;
+    flex-direction: column;
+}
+.trends b{
+    color: #6E767D;
+}
+.trendsHatag{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.trendLink{
+    text-decoration: none;
+    color: #1D9BF0;
+    font-weight: bold;
 }
