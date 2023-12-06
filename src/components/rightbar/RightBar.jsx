@@ -45,7 +45,7 @@ function RightBar() {
             </div>
 
             {
-                followUsers.map(users=>(
+                followUsers.slice(0,3).map(users=>(
                     <div className="profilFollow">
                         <div className="followContent">
                             <img src={users.avatar} alt={users.name}  className='avatarBottom' />
