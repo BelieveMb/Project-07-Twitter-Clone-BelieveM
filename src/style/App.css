@@ -367,11 +367,9 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     gap: 2rem;
 }
 .btnAction svg{
-    background-color: #1D9BF0;
-    border: 5px red solid;
-    font-size: 5rem;
+    width: 2rem;
 }
