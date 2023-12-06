@@ -6,6 +6,7 @@ import twitter from  "../../images/twitter.png";
 export const UsersList = 
     [
       {
+        "idUser": 1,
         "name": "CNN",
         "hastag" : "@CNN",
         "times" : "7m",
@@ -19,6 +20,7 @@ export const UsersList =
         }
       },
       {
+        "idUser": 2,
         "name": "The New York Times",
         "hastag" : "@nytimes",
         "times" : "2h",
@@ -33,6 +35,7 @@ export const UsersList =
         }
       },
       {
+        "idUser": 3,
         "name": "Twitter",
         "hastag" : "@Twitter",
         "times" : "Oct 29",
@@ -46,6 +49,7 @@ export const UsersList =
         }
       },
       {
+        "idUser": 4,
         "name": "Twitter",
         "hastag" : "@Twitter",
         "times" : "Oct 4",
@@ -59,6 +63,7 @@ export const UsersList =
         }
       },
       {
+        "idUser": 5,
         "name": "Twitter",
         "hastag" : "@Twitter",
         "times" : "Oct 4",
