@@ -3,7 +3,9 @@ import TitleProfile from './titleProfile'
 
 function UserProfile() {
   return (
-    <TitleProfile />
+    <main className="timeline">
+      <TitleProfile />
+    </main>
   )
 }
 
