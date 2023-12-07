@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TitleProfile from './titleProfile'
 import BannerProfile from './bannerProfile'
 import ContentProfile from './contentProfile'
@@ -9,13 +9,14 @@ import { UsersList } from '../data/Tweets';
 
 
 function UserProfile() {
-
+  const { id } = useParams();
+  const usernames = UsersList.find((usernames) => usernames.idUser === parseInt(id));
 
   return (
     <main className="timeline">
-      <TitleProfile />
-      <BannerProfile />
-      <ContentProfile />
+      <TitleProfile  AllData={usernames} />
+      <BannerProfile AllData={usernames} />
+      <ContentProfile AllData={usernames} />
       <NavProfile />
     </main>
   )
