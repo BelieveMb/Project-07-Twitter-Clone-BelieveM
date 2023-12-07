@@ -1,7 +1,9 @@
 import React from 'react'
 import Tweet from '../timeline/Tweet/Tweet'
 
-function NavProfile() {
+function NavProfile({AllData}) {
+  const userProfil = AllData;
+
   return (
     <>
       <div className='navProfile'>
@@ -13,8 +15,7 @@ function NavProfile() {
       </div>
       <div className="line"></div>
 
-      <h2>content à continuer</h2>
-      <Tweet numberTweet={0}/>
+      <Tweet />
     </>
   )
 }
