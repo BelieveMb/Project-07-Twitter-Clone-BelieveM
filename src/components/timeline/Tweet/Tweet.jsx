@@ -57,7 +57,7 @@ function Tweet(){
                         />
                     </div>
                 </div>
-             </div>
+                </div>
             ))
         }
     </>

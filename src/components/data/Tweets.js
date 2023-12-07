@@ -17,6 +17,7 @@ export const UsersList =
         "avatar" : Cnn,
         "numberPost": "145 k",
         "bannerImg" : BannerCNN,
+        "followers" : "250",
         "content": "President Joe Biden toute a lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         "haveImage": false,
         "bottomAction" : { 
@@ -33,6 +34,7 @@ export const UsersList =
         "avatar" : NYT,
         "numberPost": "15 k",
         "bannerImg" : BannerNYT,
+        "followers" : "350",
         "content": "Gardening  boomed during the pandemic 2er contenu lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum ",
         "images" : imageNYT,
         "haveImage": true,
@@ -50,6 +52,7 @@ export const UsersList =
         "avatar" : twitter,
         "numberPost": "5 k",
         "bannerImg" : BannerX,
+        "followers" : "850",
         "content": "BIG NEWS lol jk still",
         "haveImage": false,
         "bottomAction" : { 
