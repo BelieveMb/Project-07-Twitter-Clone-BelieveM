@@ -17,7 +17,9 @@ export default function App() {
               <Home />
             </Layout>
           } />
-          <Route path="/username" element={<UserName />} />
+          <Route path="/username" element={<UserName />} >
+            <Route path=":id" element={<UserName />} />
+          </Route>
           <Route path="*" element={<PageError />} />
       </Routes>
     
