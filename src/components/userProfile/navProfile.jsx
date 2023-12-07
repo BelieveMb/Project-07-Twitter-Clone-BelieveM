@@ -1,9 +1,11 @@
 import React from 'react'
 
-function navProfile() {
+function NavProfile() {
   return (
-    <div>navProfile</div>
+    <div>
+      NavProfile
+    </div>
   )
 }
 
-export default navProfile
+export default NavProfile
