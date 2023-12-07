@@ -197,6 +197,12 @@ main{
     justify-content: center;
     gap: 20px;
 }
+.tweet-action:hover, 
+.tweet-action svg:hover{
+    color: #1D9BF0;
+    cursor: pointer;
+}
+
 
 /******************style of sidebar*********************/
 .sidebar, 

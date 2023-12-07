@@ -43,7 +43,7 @@ function SideBar() {
                 <NavMenu titleMenu="Bookmarks" iconMenu={imageBookmarks} />
             </NavLink>
 
-            <NavLink to='/username'  >
+            <NavLink to='/username/2'  >
                 <NavMenu titleMenu="Profile" iconMenu={imageProfile} />
             </NavLink>
 
