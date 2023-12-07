@@ -1,6 +1,10 @@
 import Cnn from  "../../images/tweet-profile-photo.png";
+import BannerCNN from  "../../images/BannerCNN.jpg";
+
 import NYT from  "../../images/NYT.png";
+import BannerNYT from  "../../images/BannerNYT.jpg";
 import imageNYT from  "../../images/tweet-image.png";
+import BannerX from  "../../images/BannerX.jpg";
 import twitter from  "../../images/twitter.png";
 
 export const UsersList = 
@@ -12,6 +16,7 @@ export const UsersList =
         "times" : "7m",
         "avatar" : Cnn,
         "numberPost": "145 k",
+        "bannerImg" : BannerCNN,
         "content": "President Joe Biden toute a lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         "haveImage": false,
         "bottomAction" : { 
@@ -27,6 +32,7 @@ export const UsersList =
         "times" : "2h",
         "avatar" : NYT,
         "numberPost": "15 k",
+        "bannerImg" : BannerNYT,
         "content": "Gardening  boomed during the pandemic 2er contenu lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum ",
         "images" : imageNYT,
         "haveImage": true,
@@ -43,6 +49,7 @@ export const UsersList =
         "times" : "Oct 29",
         "avatar" : twitter,
         "numberPost": "5 k",
+        "bannerImg" : BannerX,
         "content": "BIG NEWS lol jk still",
         "haveImage": false,
         "bottomAction" : { 
