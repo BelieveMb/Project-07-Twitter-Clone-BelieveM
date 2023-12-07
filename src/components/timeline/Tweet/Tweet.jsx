@@ -4,6 +4,7 @@ import TweetTitle from "./TweetTitle";
 import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
 import { UsersList } from "../../data/Tweets";
+import { Link } from 'react-router-dom';
 
 
 function testImage(images, imageTweet){
@@ -28,15 +29,19 @@ function Tweet(){
             
             AllTweets.map((tweets) => (
                 <div className="tweet" key={tweets.idUser}>
-                <TweetAvatar  imageAvatar={tweets.avatar} />
+                    <Link to={`/username/${tweets.idUser}`} >
+                        <TweetAvatar  imageAvatar={tweets.avatar} />
+                    </Link>
 
                 <div className="tweet-content" >
                     <div className="tweet-title">
-                        <TweetTitle 
-                            name={tweets.name}
-                            times={tweets.times}
-                            hastag={tweets.hastag}
+                        <Link to={`/username/${tweets.idUser}`} >
+                            <TweetTitle 
+                                name={tweets.name}
+                                times={tweets.times}
+                                hastag={tweets.hastag}
                             />
+                        </Link>
                     </div>
 
                     <TweetBody content={tweets.content} />
