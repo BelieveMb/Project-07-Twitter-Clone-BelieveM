@@ -4,6 +4,8 @@ import BannerProfile from './bannerProfile'
 import ContentProfile from './contentProfile'
 import NavProfile from './navProfile'
 import { useParams } from 'react-router-dom'
+import { UsersList } from '../data/Tweets';
+
 
 function UserProfile() {
   const { id } = useParams();
@@ -13,7 +15,7 @@ function UserProfile() {
 
   return (
     <main className="timeline">
-      <TitleProfile key={id}/>
+      <TitleProfile />
       <BannerProfile />
       <ContentProfile />
       <NavProfile />
