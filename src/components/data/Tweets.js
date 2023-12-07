@@ -11,6 +11,7 @@ export const UsersList =
         "hastag" : "@CNN",
         "times" : "7m",
         "avatar" : Cnn,
+        "numberPost": "145 k",
         "content": "President Joe Biden toute a lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         "haveImage": false,
         "bottomAction" : { 
@@ -25,6 +26,7 @@ export const UsersList =
         "hastag" : "@nytimes",
         "times" : "2h",
         "avatar" : NYT,
+        "numberPost": "15 k",
         "content": "Gardening  boomed during the pandemic 2er contenu lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum ",
         "images" : imageNYT,
         "haveImage": true,
@@ -40,6 +42,7 @@ export const UsersList =
         "hastag" : "@Twitter",
         "times" : "Oct 29",
         "avatar" : twitter,
+        "numberPost": "5 k",
         "content": "BIG NEWS lol jk still",
         "haveImage": false,
         "bottomAction" : { 
