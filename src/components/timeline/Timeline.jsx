@@ -9,10 +9,8 @@ function Timeline() {
     <>
         <Header />
         <EditorTweet />
-        <Tweet numberTweet={0} />
-        <Tweet numberTweet={1} />
-        <Tweet numberTweet={2} />
-        <Tweet numberTweet={3} />
+        <Tweet />
+        
     </>
   )
 }
