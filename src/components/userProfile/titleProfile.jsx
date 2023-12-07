@@ -1,13 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 
-function TitleProfile() {
-  const { id } = useParams();
-  const usernames = UsersList.find((usernames) => usernames.idUser === parseInt(id));
-  const userProfil = usernames;
+
+function TitleProfile({AllData}) {
+  const userProfil = AllData;
 
   if(!userProfil){
-    return <h2>Aucun Profil trouvé {key} </h2>
+    return <h2>Aucun Profil trouvé  </h2>
   }
   
   return (

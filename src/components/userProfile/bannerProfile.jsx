@@ -4,7 +4,9 @@ import ImageProfil from '../../images/profilCNN.jpg';
 import Button from '../freeComponents/Button';
 
 
-function BannerProfile() {
+function BannerProfile({AllData}) {
+  const userProfil = AllData;
+
   return (
       <div className='bannerImage'>
           <img src={ImageBanner} alt="banner of profile's cnn " />
