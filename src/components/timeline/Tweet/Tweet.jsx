@@ -18,40 +18,44 @@ function testImage(images, imageTweet){
     }
 }
 
-function Tweet({numberTweet}){
+function Tweet(){
 
-
-    const [index, setIndex] = useState({numberTweet});
-    let usersTweets = UsersList[numberTweet];
-    let bottomAction = usersTweets.bottomAction;
+    const AllTweets = UsersList;
 
     return (
-        <div className="tweet">
-            <TweetAvatar  imageAvatar={usersTweets.avatar} />
+        <>
+        {
+            
+            AllTweets.map((tweets) => (
+                <div className="tweet" key={tweets.idUser}>
+                <TweetAvatar  imageAvatar={tweets.avatar} />
 
-            <div className="tweet-content">
-                <div className="tweet-title">
-                    <TweetTitle 
-                        name={usersTweets.name}
-                        times={usersTweets.times}
-                        hastag={usersTweets.hastag}
-                    />
-                </div>
+                <div className="tweet-content" >
+                    <div className="tweet-title">
+                        <TweetTitle 
+                            name={tweets.name}
+                            times={tweets.times}
+                            hastag={tweets.hastag}
+                            />
+                    </div>
 
-                <TweetBody content={usersTweets.content} />
-                {testImage(usersTweets.images, usersTweets.images)}
-               
+                    <TweetBody content={tweets.content} />
+                    {testImage(tweets.images, tweets.images)}
                 
+                    
 
-                <div className="tweet-body">
-                    <TweetBottom 
-                        comment={bottomAction.comment} 
-                        share={bottomAction.share}
-                        like={bottomAction.like}
-                    />
+                    <div className="tweet-body">
+                        <TweetBottom 
+                            comment={tweets.bottomAction.comment} 
+                            share={tweets.bottomAction.share}
+                            like={tweets.bottomAction.like}
+                        />
+                    </div>
                 </div>
-            </div>
-        </div>
+             </div>
+            ))
+        }
+    </>
     )
 }
 
