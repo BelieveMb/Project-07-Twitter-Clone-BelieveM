@@ -5,9 +5,10 @@ import RightBar from '../components/rightbar/RightBar';
 
 
 function Home() {
+
   return (
     <>
-      <SideBar />
+      <SideBar  />
       <main className="timeline">
         <Timeline />
       </main>
