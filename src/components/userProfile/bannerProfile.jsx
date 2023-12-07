@@ -1,6 +1,4 @@
 import React from 'react'
-import ImageBanner from '../../images/bannerCNN.jpg';
-import ImageProfil from '../../images/profilCNN.jpg';
 import Button from '../freeComponents/Button';
 
 
