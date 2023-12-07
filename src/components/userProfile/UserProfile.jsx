@@ -7,6 +7,9 @@ import { useParams } from 'react-router-dom'
 
 function UserProfile() {
   const { id } = useParams();
+  const key = id;
+  const usernames = UsersList.find((usernames) => usernames.idUser === parseInt(key));
+
 
   return (
     <main className="timeline">
