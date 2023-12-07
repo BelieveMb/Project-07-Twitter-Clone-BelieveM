@@ -1,10 +1,9 @@
 import React from 'react'
-import { NavLink, useParams } from 'react-router-dom';
 
 
-
-function TitleProfile({usernames}) {
-
+function TitleProfile() {
+  const { id } = useParams();
+  const usernames = UsersList.find((usernames) => usernames.idUser === parseInt(id));
   const userProfil = usernames;
 
   if(!userProfil){

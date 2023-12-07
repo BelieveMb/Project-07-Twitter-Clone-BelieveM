@@ -3,14 +3,12 @@ import TitleProfile from './titleProfile'
 import BannerProfile from './bannerProfile'
 import ContentProfile from './contentProfile'
 import NavProfile from './navProfile'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom';
 import { UsersList } from '../data/Tweets';
 
 
+
 function UserProfile() {
-  const { id } = useParams();
-  const key = id;
-  const usernames = UsersList.find((usernames) => usernames.idUser === parseInt(key));
 
 
   return (
