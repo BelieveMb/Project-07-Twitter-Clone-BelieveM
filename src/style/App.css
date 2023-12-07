@@ -403,3 +403,20 @@ main{
 .contentDetail span{
     margin-right: 4rem;
 }
+
+/****navProfile*********************/
+.navProfile{
+    display: flex;
+    flex-direction: row;
+    align-content: baseline;
+    justify-content: space-around;
+    margin-left: 3rem;
+} 
+.line{
+    border-bottom: 1px solid #3c4044;
+    padding-bottom: 1rem;
+}
+.navProfile a {
+    text-decoration: none;
+    color: #fff;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import TitleProfile from './titleProfile'
 import BannerProfile from './bannerProfile'
 import ContentProfile from './contentProfile'
+import NavProfile from './navProfile'
 
 function UserProfile() {
   return (
@@ -9,6 +10,7 @@ function UserProfile() {
       <TitleProfile />
       <BannerProfile />
       <ContentProfile />
+      <NavProfile />
     </main>
   )
 }
