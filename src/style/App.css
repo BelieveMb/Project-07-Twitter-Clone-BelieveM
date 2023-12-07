@@ -150,8 +150,14 @@ main{
 .tweet-title svg{
     width: 1.2rem;
     height: auto;
+    color: #fff;
+    margin-left: 1rem;
 }
+
+/* tweet-title-bloc */
 .tweet-title-author{
+    color: #fff;
+    text-decoration:  none;
     font-size: 1rem;
 }
 .tweet-title-details{
@@ -197,10 +203,16 @@ main{
     justify-content: center;
     gap: 20px;
 }
-.tweet-action:hover, 
-.tweet-action svg:hover{
+.tweet-action:hover{
     color: #1D9BF0;
     cursor: pointer;
+}
+.tweet-action svg:hover{
+    box-shadow: 1px 2px 5px #1D9BF0;
+    filter: drop-shadow(10 -6mm 4mm rgb(29, 155, 240));
+    /* color: #127ec5be; */
+    /* border-radius: 50%; */
+    padding: 0.8rem;
 }
 
 
