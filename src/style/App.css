@@ -208,11 +208,7 @@ main{
     cursor: pointer;
 }
 .tweet-action svg:hover{
-    box-shadow: 1px 2px 5px #1D9BF0;
-    filter: drop-shadow(10 -6mm 4mm rgb(29, 155, 240));
-    /* color: #127ec5be; */
-    /* border-radius: 50%; */
-    padding: 0.8rem;
+    color: #127ec5be;
 }
 
 
@@ -226,6 +222,7 @@ main{
 }
 .rightbar{
     right: 0;
+    margin-right: -2rem;
 }
 .iconText{
     display: flex;

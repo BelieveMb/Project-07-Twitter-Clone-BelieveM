@@ -21,9 +21,9 @@ export const UsersList =
         "content": "President Joe Biden toute a lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         "haveImage": false,
         "bottomAction" : { 
-            "comment" : "57",
-            "share" : "144",
-            "like" : "184"
+            "comment" : 57,
+            "share" : 144,
+            "like" : 184
         }
       },
       {
@@ -39,9 +39,9 @@ export const UsersList =
         "images" : imageNYT,
         "haveImage": true,
         "bottomAction" : { 
-            "comment" : "19",
-            "share" : "48",
-            "like" : "482"
+            "comment" : 19,
+            "share" : 48,
+            "like" : 482
         }
       },
       {
@@ -56,9 +56,9 @@ export const UsersList =
         "content": "BIG NEWS lol jk still",
         "haveImage": false,
         "bottomAction" : { 
-            "comment" : "6.8K",
-            "share" : "36.6K",
-            "like" : "267.1K"
+            "comment" : 68,
+            "share" : 36.6,
+            "like" : 267.1
         }
       },
       {
@@ -70,9 +70,9 @@ export const UsersList =
         "content": "Hello literally everyone ",
         "haveImage": false,
         "bottomAction" : { 
-            "comment" : "116.7K",
-            "share" : "785.4K",
-            "like" : "3.3M"
+            "comment" : 116.7,
+            "share" : 785.4,
+            "like" : 3.3
         }
       },
       {
@@ -84,9 +84,9 @@ export const UsersList =
         "content": "Hello literally everyone ",
         "haveImage": false,
         "bottomAction" : { 
-            "comment" : "116.7K",
-            "share" : "785.4K",
-            "like" : "3.3M"
+            "comment" : 116.7,
+            "share" : 785.4,
+            "like" : 3.3
         }
       }
       
