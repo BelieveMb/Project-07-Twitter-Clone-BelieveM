@@ -70,7 +70,7 @@ export const UsersList =
         "content": "Hello literally everyone ",
         "haveImage": false,
         "bottomAction" : { 
-            "comment" : 116.7,
+            "comment" : 116,
             "share" : 785.4,
             "like" : 3.3
         }
