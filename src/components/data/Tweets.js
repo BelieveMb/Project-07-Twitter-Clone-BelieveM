@@ -67,6 +67,8 @@ export const UsersList =
         "hastag" : "@Twitter",
         "times" : "Oct 4",
         "avatar" : twitter,
+        "numberPost": "5 k",
+        "bannerImg" : BannerX,
         "content": "Hello literally everyone ",
         "haveImage": false,
         "bottomAction" : { 
@@ -81,6 +83,8 @@ export const UsersList =
         "hastag" : "@Twitter",
         "times" : "Oct 4",
         "avatar" : twitter,
+        "numberPost": "5 k",
+        "bannerImg" : BannerX,
         "content": "Hello literally everyone ",
         "haveImage": false,
         "bottomAction" : { 
