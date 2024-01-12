@@ -33,30 +33,30 @@ function Tweet(){
                         <TweetAvatar  imageAvatar={tweets.avatar} />
                     </Link>
 
-                <div className="tweet-content" >
-                    <div className="tweet-title">
-                        <Link to={`/username/${tweets.idUser}`} >
-                            <TweetTitle 
-                                name={tweets.name}
-                                times={tweets.times}
-                                hastag={tweets.hastag}
-                            />
-                        </Link>
-                    </div>
+                    <div className="tweet-content" >
+                        <div className="tweet-title ">
+                            <Link to={`/username/${tweets.idUser}`} >
+                                <TweetTitle 
+                                    name={tweets.name}
+                                    times={tweets.times}
+                                    hastag={tweets.hastag}
+                                />
+                            </Link>
+                        </div>
 
-                    <TweetBody content={tweets.content} />
-                    {testImage(tweets.images, tweets.images)}
-                
+                        <TweetBody content={tweets.content} />
+                        {testImage(tweets.images, tweets.images)}
                     
+                        
 
-                    <div className="tweet-body">
-                        <TweetBottom 
-                            comment={tweets.bottomAction.comment} 
-                            share={tweets.bottomAction.share}
-                            like={tweets.bottomAction.like}
-                        />
+                        <div className="tweet-body">
+                            <TweetBottom 
+                                comment={tweets.bottomAction.comment} 
+                                share={tweets.bottomAction.share}
+                                like={tweets.bottomAction.like}
+                            />
+                        </div>
                     </div>
-                </div>
                 </div>
             ))
         }
