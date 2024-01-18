@@ -19,6 +19,7 @@ export default function App() {
           } />
           <Route path="/username" element={<UserName />} >
             <Route path=":id" element={<UserName />} />
+            <Route path="*" element={<PageError />} />
           </Route>
           <Route path="*" element={<PageError />} />
       </Routes>
