@@ -25,24 +25,24 @@ function Tweet(){
 
     const AllTweets = UsersList;
     const contentPublish = useContext(PublishContext);
-    const idUserOnline = useContext(UserConnexion)
+    const userDataOnline = useContext(UserConnexion)
 
 
     return (
         <>
         <h1>{contentPublish}</h1>
         <div className="tweet" >
-            <Link to={`/username/${tweets.idUser}`} >
-                <TweetAvatar  imageAvatar={tweets.avatar} />
+            <Link to={`/username/${userDataOnline.idUser}`} >
+                <TweetAvatar  imageAvatar={userDataOnline.avatar} />
             </Link>
 
             <div className="tweet-content" >
                 <div className="tweet-title ">
-                    <Link to={`/username/${tweets.idUser}`} >
+                    <Link to={`/username/${userDataOnline.idUser}`} >
                         <TweetTitle 
-                            name={tweets.name}
-                            times={tweets.times}
-                            hastag={tweets.hastag}
+                            name={userDataOnline.name}
+                            times={userDataOnline.times}
+                            hastag={userDataOnline.hastag}
                         />
                     </Link>
                 </div>
@@ -54,9 +54,9 @@ function Tweet(){
 
                 <div className="tweet-body">
                     <TweetBottom 
-                        comment={tweets.bottomAction.comment} 
-                        share={tweets.bottomAction.share}
-                        like={tweets.bottomAction.like}
+                        comment={userDataOnline.bottomAction.comment} 
+                        share={userDataOnline.bottomAction.share}
+                        like={userDataOnline.bottomAction.like}
                     />
                 </div>
             </div>
