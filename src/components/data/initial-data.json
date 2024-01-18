@@ -1,0 +1,21 @@
+{ 
+    
+    "current-user": {
+        "iduser": 1,
+        "name": "Josh",
+        "handle": "josh_27",
+        "avatar": "https://pbs.twimg.com/profile_images/889954339591890944/6_d-y82V_400x400.jpg"
+    },
+    "tweets": [
+        {
+            "idtweet": 1,
+            "iduser": 1,
+            "text": "Hello, world!",
+            "image": "mon image",
+            "likes": 0,
+            "retweets": 0,
+            "replies": 0,
+            "date": "2018-03-28T19:52:28.000Z"
+        }
+    ] 
+}  

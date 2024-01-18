@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import Timeline from '../components/timeline/Timeline';
 import SideBar from '../components/sidebar/SideBar';
 import RightBar from '../components/rightbar/RightBar';

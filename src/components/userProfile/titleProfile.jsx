@@ -7,7 +7,7 @@ function TitleProfile({AllData}) {
   const userProfil = AllData;
 
   if(!userProfil){
-    return <h2>Aucun Profil trouvé  </h2>
+    return <h2>Désolé, Aucun Profil trouvé  </h2>
   }
   
   return (
