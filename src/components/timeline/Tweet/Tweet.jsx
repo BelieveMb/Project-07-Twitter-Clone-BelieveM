@@ -30,7 +30,6 @@ function Tweet(){
 
     return (
         <>
-        <h1>{contentPublish}</h1>
         <div className="tweet" >
             <Link to={`/username/${userDataOnline.idUser}`} >
                 <TweetAvatar  imageAvatar={userDataOnline.avatar} />
