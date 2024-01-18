@@ -6,14 +6,12 @@ import imagePoll from "../../../images/Poll.png";
 import imageSmile from "../../../images/Emoji.png";
 import imageSchedule from "../../../images/Schedule.png";
 import { dataInitial } from '../../data/Data-initial';
-import PublishContext from '../../context/PublishContext';
 
 const dataTweet = dataInitial
 
 
 function EditorTweet({action}) {
 
- const textTweet = useContext(PublishContext);
  
   return (
 

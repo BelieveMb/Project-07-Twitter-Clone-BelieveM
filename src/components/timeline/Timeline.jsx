@@ -10,6 +10,7 @@ function Timeline() {
   const addNewTweet = () =>{
     let  tweetContent = document.querySelector('#tweetContent');
     setTextTweet(tweetContent.value); 
+    
     tweetContent.value = "";
   }
   const ContextValue = textTweet;

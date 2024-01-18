@@ -1,10 +1,12 @@
-import React, { useState } from'react';
+import React, { useContext, useState } from'react';
 import TweetBody from "./TweetBody";
 import TweetTitle from "./TweetTitle";
 import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
 import { UsersList } from "../../data/Tweets";
 import { Link } from 'react-router-dom';
+import PublishContext from '../../context/PublishContext';
+import UserConnexion from '../../context/UserConnexion';
 
 
 function testImage(images, imageTweet){
@@ -22,9 +24,43 @@ function testImage(images, imageTweet){
 function Tweet(){
 
     const AllTweets = UsersList;
+    const contentPublish = useContext(PublishContext);
+    const idUserOnline = useContext(UserConnexion)
+
 
     return (
         <>
+        <h1>{contentPublish}</h1>
+        <div className="tweet" >
+            <Link to={`/username/${tweets.idUser}`} >
+                <TweetAvatar  imageAvatar={tweets.avatar} />
+            </Link>
+
+            <div className="tweet-content" >
+                <div className="tweet-title ">
+                    <Link to={`/username/${tweets.idUser}`} >
+                        <TweetTitle 
+                            name={tweets.name}
+                            times={tweets.times}
+                            hastag={tweets.hastag}
+                        />
+                    </Link>
+                </div>
+
+                <TweetBody content={contentPublish} />
+                {/* {testImage(tweets.images, tweets.images)} */}
+            
+                
+
+                <div className="tweet-body">
+                    <TweetBottom 
+                        comment={tweets.bottomAction.comment} 
+                        share={tweets.bottomAction.share}
+                        like={tweets.bottomAction.like}
+                    />
+                </div>
+            </div>
+        </div>
         {
             
             AllTweets.map((tweets) => (
