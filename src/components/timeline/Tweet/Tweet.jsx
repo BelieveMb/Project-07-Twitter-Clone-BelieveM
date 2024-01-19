@@ -50,16 +50,12 @@ function Tweet(){
                             />
                         </Link>
                     </div>
-
                     <TweetBody content={newTweet[0]} />
-                
-                    
-
                     <div className="tweet-body">
                         <TweetBottom 
                             comment={newTweet[1]} 
                             share={newTweet[2]}
-                            like={newTweet[3]}
+                            like={parseInt(newTweet[3])}
                         />
                     </div>
                 </div>

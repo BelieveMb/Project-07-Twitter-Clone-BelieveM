@@ -5,13 +5,13 @@ import Tweet from './Tweet/Tweet'
 
 
 function Timeline() {
-  const [textTweet, setTextTweet] = useState(["",1,2,3]);
+  const [textTweet, setTextTweet] = useState(["",0,0,0]);
   const addNewTweet = () =>{
     let  tweetContent = document.querySelector('#tweetContent').value;
     
     setTextTweet([tweetContent,0,0,0]); 
     localStorage.setItem('tweetContent', textTweet);
-    tweetContent = "";
+    // tweetContent
   }
 
 
