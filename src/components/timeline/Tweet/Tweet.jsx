@@ -77,10 +77,11 @@ function Tweet(){
     const checkURL = window.location.pathname;
     const takeURL2 = checkURL.split('/');
     const takeURLpart = parseInt(takeURL2[2]);
+    console.log(checkURL)
 
     return (
         <>
-            { takeURLpart === 1 ?  
+            { takeURLpart === 1 || checkURL === '/' ? 
                 <div className="tweet" >
                         <Link to={`/username/${userDataOnline.idUser}`} >
                             <TweetAvatar  imageAvatar={userDataOnline.avatar} />
@@ -105,8 +106,8 @@ function Tweet(){
                                 />
                             </div>
                         </div>
-                </div>
-            : null }
+                </div> : null 
+             } 
 
         {
             checkURL === `/username/${takeURLpart}` ?
