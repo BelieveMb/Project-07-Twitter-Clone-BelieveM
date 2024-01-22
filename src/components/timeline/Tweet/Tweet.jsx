@@ -22,10 +22,11 @@ function testImage(images, imageTweet){
 }
 
 const ListAllTweets = () => {
-    const tweets = UsersList.find((tweet) => tweet.idUser === 1);
-    // const checkURL = window.location.pathname;
-    const { idConnect } = useParams();
-    console.log(idConnect)
+    const takeURL = window.location.pathname;
+    const takeURL2 = takeURL.split('/');
+    const takeURLpart = parseInt(takeURL2[2]);
+    console.log(takeURLpart);
+    const tweets = UsersList.find((tweet) => tweet.idUser === takeURLpart);
 
 
 
@@ -52,11 +53,11 @@ const ListAllTweets = () => {
                         
 
                         <div className="tweet-body">
-                            {/* <TweetBottom 
+                            <TweetBottom 
                                 comment={tweets.bottomAction.comment} 
                                 share={tweets.bottomAction.share}
                                 like={tweets.bottomAction.like}
-                            /> */}
+                            />
                         </div>
                     </div>
         </div>
@@ -76,6 +77,9 @@ function Tweet(){
     const newTweet = newTweets.split(',');
 
     const checkURL = window.location.pathname;
+    const takeURL2 = checkURL.split('/');
+    const takeURLpart = parseInt(takeURL2[2]);
+
     // console.log(cheminOuURL)
     
     return (
@@ -109,7 +113,7 @@ function Tweet(){
         </div>
 
         {
-            checkURL === "/username/1" ?
+            checkURL === `/username/${takeURLpart}` ?
               <ListAllTweets />
             : AllTweets.map((tweets) => (
 
