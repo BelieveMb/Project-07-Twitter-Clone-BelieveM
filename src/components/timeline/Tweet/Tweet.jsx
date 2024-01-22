@@ -32,34 +32,34 @@ const ListAllTweets = () => {
 
     return (
         <div className="tweet" key={tweets.idUser}>
+            <Link to={`/username/${tweets.idUser}`} >
+                <TweetAvatar  imageAvatar={tweets.avatar} />
+            </Link>
+
+            <div className="tweet-content" >
+                <div className="tweet-title ">
                     <Link to={`/username/${tweets.idUser}`} >
-                        <TweetAvatar  imageAvatar={tweets.avatar} />
+                        <TweetTitle 
+                            name={tweets.name}
+                            times={tweets.times}
+                            hastag={tweets.hastag}
+                        />
                     </Link>
+                </div>
 
-                    <div className="tweet-content" >
-                        <div className="tweet-title ">
-                            <Link to={`/username/${tweets.idUser}`} >
-                                <TweetTitle 
-                                    name={tweets.name}
-                                    times={tweets.times}
-                                    hastag={tweets.hastag}
-                                />
-                            </Link>
-                        </div>
+                <TweetBody content={tweets.content} />
+                {testImage(tweets.images, tweets.images)}
+            
+                
 
-                        <TweetBody content={tweets.content} />
-                        {testImage(tweets.images, tweets.images)}
-                    
-                        
-
-                        <div className="tweet-body">
-                            <TweetBottom 
-                                comment={tweets.bottomAction.comment} 
-                                share={tweets.bottomAction.share}
-                                like={tweets.bottomAction.like}
-                            />
-                        </div>
-                    </div>
+                <div className="tweet-body">
+                    <TweetBottom 
+                        comment={tweets.bottomAction.comment} 
+                        share={tweets.bottomAction.share}
+                        like={tweets.bottomAction.like}
+                    />
+                </div>
+            </div>
         </div>
     )
 }
@@ -67,50 +67,46 @@ const ListAllTweets = () => {
 function Tweet(){
 
     const AllTweets = UsersList;
-    const AllTweetsFilter = UsersList.filter((tweets) => tweets.idUser === 1);
 
     const contentPublish = useContext(PublishContext);
     const userDataOnline = useContext(UserConnexion);
 
     const newTweets = localStorage.getItem('tweetContent');
-    console.log(newTweets.split(','));
     const newTweet = newTweets.split(',');
 
     const checkURL = window.location.pathname;
     const takeURL2 = checkURL.split('/');
     const takeURLpart = parseInt(takeURL2[2]);
 
-    // console.log(cheminOuURL)
-    
     return (
         <>
-        
-        
-        <div className="tweet" >
-                <Link to={`/username/${userDataOnline.idUser}`} >
-                    <TweetAvatar  imageAvatar={userDataOnline.avatar} />
-                </Link>
-
-                <div className="tweet-content" >
-                    <div className="tweet-title ">
+            { takeURLpart === 1 ?  
+                <div className="tweet" >
                         <Link to={`/username/${userDataOnline.idUser}`} >
-                            <TweetTitle 
-                                name={userDataOnline.name}
-                                times={userDataOnline.times}
-                                hastag={userDataOnline.hastag}
-                            />
+                            <TweetAvatar  imageAvatar={userDataOnline.avatar} />
                         </Link>
-                    </div>
-                    <TweetBody content={newTweet[0]} />
-                    <div className="tweet-body">
-                        <TweetBottom 
-                            comment={newTweet[1]} 
-                            share={newTweet[2]}
-                            like={parseInt(newTweet[3])}
-                        />
-                    </div>
+
+                        <div className="tweet-content" >
+                            <div className="tweet-title ">
+                                <Link to={`/username/${userDataOnline.idUser}`} >
+                                    <TweetTitle 
+                                        name={userDataOnline.name}
+                                        times={userDataOnline.times}
+                                        hastag={userDataOnline.hastag}
+                                    />
+                                </Link>
+                            </div>
+                            <TweetBody content={newTweet[0]} />
+                            <div className="tweet-body">
+                                <TweetBottom 
+                                    comment={newTweet[1]} 
+                                    share={newTweet[2]}
+                                    like={parseInt(newTweet[3])}
+                                />
+                            </div>
+                        </div>
                 </div>
-        </div>
+            : null }
 
         {
             checkURL === `/username/${takeURLpart}` ?
@@ -147,10 +143,7 @@ function Tweet(){
                         </div>
                     </div>
                 </div>
-            ))
-            
-            // AllTweets.map((tweets) => {})
-                 
+            ))                 
         }
     </>
     )
