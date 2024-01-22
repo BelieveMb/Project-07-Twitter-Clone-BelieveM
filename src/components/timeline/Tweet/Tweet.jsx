@@ -4,7 +4,7 @@ import TweetTitle from "./TweetTitle";
 import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
 import { UsersList } from "../../data/Tweets";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import PublishContext from '../../context/PublishContext';
 import UserConnexion from '../../context/UserConnexion';
 
@@ -21,9 +21,53 @@ function testImage(images, imageTweet){
     }
 }
 
+const ListAllTweets = () => {
+    const tweets = UsersList.find((tweet) => tweet.idUser === 1);
+    // const checkURL = window.location.pathname;
+    const { idConnect } = useParams();
+    console.log(idConnect)
+
+
+
+    return (
+        <div className="tweet" key={tweets.idUser}>
+                    <Link to={`/username/${tweets.idUser}`} >
+                        <TweetAvatar  imageAvatar={tweets.avatar} />
+                    </Link>
+
+                    <div className="tweet-content" >
+                        <div className="tweet-title ">
+                            <Link to={`/username/${tweets.idUser}`} >
+                                <TweetTitle 
+                                    name={tweets.name}
+                                    times={tweets.times}
+                                    hastag={tweets.hastag}
+                                />
+                            </Link>
+                        </div>
+
+                        <TweetBody content={tweets.content} />
+                        {testImage(tweets.images, tweets.images)}
+                    
+                        
+
+                        <div className="tweet-body">
+                            {/* <TweetBottom 
+                                comment={tweets.bottomAction.comment} 
+                                share={tweets.bottomAction.share}
+                                like={tweets.bottomAction.like}
+                            /> */}
+                        </div>
+                    </div>
+        </div>
+    )
+}
+
 function Tweet(){
 
     const AllTweets = UsersList;
+    const AllTweetsFilter = UsersList.filter((tweets) => tweets.idUser === 1);
+
     const contentPublish = useContext(PublishContext);
     const userDataOnline = useContext(UserConnexion);
 
@@ -31,6 +75,9 @@ function Tweet(){
     console.log(newTweets.split(','));
     const newTweet = newTweets.split(',');
 
+    const checkURL = window.location.pathname;
+    // console.log(cheminOuURL)
+    
     return (
         <>
         
@@ -59,13 +106,15 @@ function Tweet(){
                         />
                     </div>
                 </div>
-            </div>
+        </div>
 
         {
-            
-            AllTweets.map((tweets) => (
+            checkURL === "/username/1" ?
+              <ListAllTweets />
+            : AllTweets.map((tweets) => (
+
                 <div className="tweet" key={tweets.idUser}>
-                    <Link to={`/username/${tweets.idUser}`} >
+                    <Link to={`/username/${tweets.idUser}`} > 
                         <TweetAvatar  imageAvatar={tweets.avatar} />
                     </Link>
 
@@ -95,6 +144,9 @@ function Tweet(){
                     </div>
                 </div>
             ))
+            
+            // AllTweets.map((tweets) => {})
+                 
         }
     </>
     )

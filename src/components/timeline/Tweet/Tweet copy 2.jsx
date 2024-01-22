@@ -25,42 +25,42 @@ function Tweet(){
 
     const AllTweets = UsersList;
     const contentPublish = useContext(PublishContext);
-    const userDataOnline = useContext(UserConnexion)
-    console.log(contentPublish)
+    const userDataOnline = useContext(UserConnexion);
 
+    const newTweets = localStorage.getItem('tweetContent');
+    console.log(newTweets.split(','));
+    const newTweet = newTweets.split(',');
 
     return (
         <>
+        
+        
         <div className="tweet" >
-            <Link to={`/username/${userDataOnline.idUser}`} >
-                <TweetAvatar  imageAvatar={userDataOnline.avatar} />
-            </Link>
+                <Link to={`/username/${userDataOnline.idUser}`} >
+                    <TweetAvatar  imageAvatar={userDataOnline.avatar} />
+                </Link>
 
-            <div className="tweet-content" >
-                <div className="tweet-title ">
-                    <Link to={`/username/${userDataOnline.idUser}`} >
-                        <TweetTitle 
-                            name={userDataOnline.name}
-                            times={userDataOnline.times}
-                            hastag={userDataOnline.hastag}
+                <div className="tweet-content" >
+                    <div className="tweet-title ">
+                        <Link to={`/username/${userDataOnline.idUser}`} >
+                            <TweetTitle 
+                                name={userDataOnline.name}
+                                times={userDataOnline.times}
+                                hastag={userDataOnline.hastag}
+                            />
+                        </Link>
+                    </div>
+                    <TweetBody content={newTweet[0]} />
+                    <div className="tweet-body">
+                        <TweetBottom 
+                            comment={newTweet[1]} 
+                            share={newTweet[2]}
+                            like={parseInt(newTweet[3])}
                         />
-                    </Link>
-                </div>
-
-                <TweetBody content={contentPublish} />
-                {/* {testImage(tweets.images, tweets.images)} */}
-            
-                
-
-                <div className="tweet-body">
-                    {/* <TweetBottom 
-                        comment={userDataOnlinbottomAction.comment} 
-                        share={userDataOnline.bottomAction.share}
-                        like={userDataOnline.bottomAction.like}
-                    /> */}
+                    </div>
                 </div>
             </div>
-        </div>
+
         {
             
             AllTweets.map((tweets) => (
