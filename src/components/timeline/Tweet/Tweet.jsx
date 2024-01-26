@@ -4,6 +4,7 @@ import TweetTitle from "./TweetTitle";
 import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
 import { UsersList } from "../../data/Tweets";
+// import { }
 import { Link } from 'react-router-dom';
 
 
@@ -19,15 +20,19 @@ function testImage(images, imageTweet){
     }
 }
 
-function Tweet(){
+function Tweet({filterUser}){
+    // const Tweets = UsersList;
+    const Tweets = UsersList;
+    {filterUser !== 0  ?
+        Tweets
+        : Tweets.filter((tweet) => tweet.idUser === filterUser)
+    }
 
-    const AllTweets = UsersList;
-
+    // console.log(filterUser);
     return (
         <>
         {
-            
-            AllTweets.map((tweets) => (
+            Tweets.map((tweets) => (
                 <div className="tweet" key={tweets.idUser}>
                     <Link to={`/username/${tweets.idUser}`} >
                         <TweetAvatar  imageAvatar={tweets.avatar} />
