@@ -15,7 +15,7 @@ function NavProfile({AllData}) {
       </div>
       <div className="line"></div>
 
-      <Tweet />
+      {/* <Tweet /> */}
     </>
   )
 }

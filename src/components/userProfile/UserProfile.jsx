@@ -5,6 +5,7 @@ import ContentProfile from './contentProfile'
 import NavProfile from './navProfile'
 import { NavLink, useParams } from 'react-router-dom';
 import { UsersList } from '../data/Tweets';
+import Tweet from '../timeline/Tweet/Tweet'
 
 
 
@@ -18,6 +19,7 @@ function UserProfile() {
       <BannerProfile AllData={usernames} />
       <ContentProfile AllData={usernames} />
       <NavProfile />
+      <Tweet filterUser={id} />
     </main>
   )
 }
