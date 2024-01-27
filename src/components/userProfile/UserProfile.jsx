@@ -19,7 +19,7 @@ function UserProfile() {
       <BannerProfile AllData={usernames} />
       <ContentProfile AllData={usernames} />
       <NavProfile />
-      <Tweet filterUser={id} />
+      <Tweet  />
     </main>
   )
 }
