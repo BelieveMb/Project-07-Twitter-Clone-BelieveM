@@ -1,35 +1,33 @@
 import React, { useContext, useState } from 'react';
-import imageAvatar from  '../../../../public/images/profile-photo.png';
-
-
-import imageMedia from "../../../../public/images/Media.png";
-import imageGif from "../../../../public/images/Gif.png";
-import imagePoll from "../../../../public/images/Poll.png";
-import imageSmile from "../../../../public/images/Emoji.png";
-import imageSchedule from "../../../../public/images/Schedule.png";
+import imageAvatar from '../../../images/profile-photo.png';
+import imageMedia from "../../../images/Media.png";
+import imageGif from "../../../images/Gif.png";
+import imagePoll from "../../../images/Poll.png";
+import imageSmile from "../../../images/Emoji.png";
+import imageSchedule from "../../../images/Schedule.png";
 import TweetContext from '../../../context/tweetContext';
 
 
 function EditorTweet() {
-  const {allData, setAllData} = useContext(TweetContext);
+  const TweetAdd  = useContext(TweetContext);
+  const newTweet = TweetAdd.addNewTweets
+  const idTweet  = TweetAdd.tweets
   const [inputValue, setInputValue] = useState('');
-  // const [tweets, setTweets] = useState([]);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
   const handleAddTweet = () => {
-    const newTweet = {
-      id: allData.tweets.length + 1,
+    newTweet({
+      id: idTweet.lenght + 1, 
       content: inputValue,
-    };
-    console.log("id  : ", newTweet.id)
-    const updatedTweets = [...allData.tweets];
-    updatedTweets.unshift(newTweet);
-    setAllData({...allData, tweets : updatedTweets});
-    setInputValue(''); // Effacez le contenu de l'input après l'ajout du tweet
+      // Autres propriétés du tweet
+    });
+    setInputValue('');
   };
+
+  console.log(TweetContext);
 
   return (
 
@@ -38,7 +36,7 @@ function EditorTweet() {
         <img src={imageAvatar} alt="image du profile" />
       </div>
       <div className="tweet-editor-form">
-        <input type="text"  value={inputValue} onChange={handleInputChange}  placeholder="What's happening" className="tweet-editor-input" />
+        <input type="text"  value={inputValue} onChange={handleInputChange} placeholder="What's happening" className="tweet-editor-input" />
         <div className="tweet-editor-buttons">
           <div className="tweet-editor-actions">
             <img src={imageMedia} alt="image du media" />

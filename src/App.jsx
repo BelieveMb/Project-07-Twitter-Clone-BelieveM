@@ -12,14 +12,19 @@ import ('./style/reset.css');
 import ('./style/App.css');
 
 export default function App() {
-  const [allData, setAllData] = useState(data);
-  const userOnline = 1;
 
+  const [allData, setAllData] = useState(data);
+  const [addTweet, setAddTweet] = useState([]);
+  const userOnline = 1;
+  // const addNewTweets = (newTweet) => {
+  //   setAddTweet([...addTweet, newTweet]);
+  // }
   return (
     <BrowserRouter>
-        <TweetContext.Provider value={{allData, userOnline}}>
+        <TweetContext.Provider value={{
+            allData,setAllData, userOnline, addTweet
+          }}>
           <Routes>
-
               <Route path="/" element={
                 <Layout>
                   <Home />
@@ -29,7 +34,6 @@ export default function App() {
                 <Route path=":id" element={<UserName />} />
               </Route>
               <Route path="*" element={<PageError />} />
-
           </Routes>
         </TweetContext.Provider>
     </BrowserRouter>

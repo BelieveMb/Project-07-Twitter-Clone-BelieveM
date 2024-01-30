@@ -3,8 +3,6 @@ import TweetBody from "./TweetBody";
 import TweetTitle from "./TweetTitle";
 import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
-import { UsersList } from "../../data/Tweets";
-// import { }
 import { Link, useParams } from 'react-router-dom';
 import TweetContext from '../../../context/tweetContext';
 
@@ -22,11 +20,11 @@ function testImage(images, imageTweet){
 }
 
 const TweetsMap =({dataTweets}) => {
-    const Tweets = dataTweets.allData.tweets;
+    const allTweets = dataTweets.tweets;
     return(
         <>
         {
-            Tweets.map((tweets) => (
+            allTweets.map((tweets) => (
             <div className="tweet" key={tweets.idUser}>
                 <Link to={`/username/${tweets.idUser}`} >
                     <TweetAvatar  imageAvatar={tweets.avatar} />
@@ -105,21 +103,21 @@ const TweetsUser = ({dataTweets}) => {
 
 
 function Tweet(){
-    const dataTweets = useContext(TweetContext);
-    const userOnlineId = dataTweets.userOnline;
+    const {allData } = useContext(TweetContext);
+
+    const userOnlineId = allData.userOnline;
     const [ selectUrl, setSelectUrl] = useState('');
     useEffect(() => {
         const currentUrl = window.location.pathname;
         setSelectUrl(currentUrl);
-        console.log('URL actuelle :', currentUrl);
       }, []);
 
     return (
         <>
         
         { selectUrl === '/' || selectUrl === ''
-            ? <TweetsMap dataTweets={dataTweets} /> 
-            : <TweetsUser dataTweets={dataTweets} /> 
+            ? <TweetsMap dataTweets={allData} /> 
+            : <TweetsUser dataTweets={allData} /> 
         }
     </>
     )

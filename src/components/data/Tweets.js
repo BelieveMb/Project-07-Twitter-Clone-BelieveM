@@ -1,11 +1,11 @@
-import Cnn from  "../../images/tweet-profile-photo.png";
-import BannerCNN from  "../../images/BannerCNN.jpg";
+import Cnn from  "../../../public/images/tweet-profile-photo.png";
+import BannerCNN from  "../../../public/images/BannerCNN.jpg";
 
-import NYT from  "../../images/NYT.png";
-import BannerNYT from  "../../images/BannerNYT.jpg";
-import imageNYT from  "../../images/tweet-image.png";
-import BannerX from  "../../images/BannerX.jpg";
-import twitter from  "../../images/twitter.png";
+import NYT from  "../../../public/images/NYT.png";
+import BannerNYT from  "../../../public/images/BannerNYT.jpg";
+import imageNYT from  "../../../public/images/tweet-image.png";
+import BannerX from  "../../../public/images/BannerX.jpg";
+import twitter from  "../../../public/images/twitter.png";
 
 export const UsersList = 
     [
