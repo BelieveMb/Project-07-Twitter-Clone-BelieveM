@@ -1,11 +1,11 @@
-import Layout from "./components/layout.jsx";
 import Home from "./pages/home.jsx";
 import PageError from "./pages/pageError.jsx";
 import UserName from './pages/userName';
 import { BrowserRouter, Routes, Route  } from 'react-router-dom';
-import data from './data/initial-data.json'
+import data from './initial-data.json'
 import { useState } from "react";
 import TweetContext from "./context/tweetContext.jsx";
+import Layout from "./components/Layout.jsx";
 
 
 import ('./style/reset.css');
