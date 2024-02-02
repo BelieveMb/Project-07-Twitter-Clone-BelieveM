@@ -40,12 +40,8 @@ const TweetsMap =({dataTweets}) => {
                             />
                         </Link>
                     </div>
-
                     <TweetBody content={tweets.content} />
                     {testImage(tweets.images, tweets.images)}
-                
-                    
-
                     <div className="tweet-body">
                         <TweetBottom 
                             comment={tweets.comment} 
@@ -62,7 +58,9 @@ const TweetsMap =({dataTweets}) => {
 }
 const TweetsUser = ({dataTweets}) => {
     const { id } = useParams();
-    const tweets = dataTweets.allData.tweets[id];
+    const tweets = dataTweets.tweets[id];
+    // const allTweets = dataTweets.tweets;
+
     return(
         <>
         {

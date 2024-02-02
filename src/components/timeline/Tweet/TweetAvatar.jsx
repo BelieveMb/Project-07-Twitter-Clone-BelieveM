@@ -4,7 +4,7 @@ function TweetAvatar({imageAvatar}) {
     const photo = {imageAvatar};
     return (
         <div className="tweet-avatar">
-            <img src={photo} alt="avatar" />
+            <img src={"../../../images/" + photo} alt="avatar" />
         </div>
     )
 }
