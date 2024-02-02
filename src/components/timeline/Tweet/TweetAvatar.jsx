@@ -1,10 +1,9 @@
 import React from'react';
 
 function TweetAvatar({imageAvatar}) {
-    const photo = {imageAvatar};
     return (
         <div className="tweet-avatar">
-            <img src={"../../../images/" + photo} alt="avatar" />
+            <img src={imageAvatar} className='w-[5rem] h-16 ' alt="avatar" />
         </div>
     )
 }

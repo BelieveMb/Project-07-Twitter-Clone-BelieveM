@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import data from './initial-data.json'
 import { useState } from "react";
 import TweetContext from "./context/tweetContext.jsx";
-import Layout from "./components/Layout.jsx";
+import Layout from "./components/layout.jsx";
 
 
 import ('./style/reset.css');

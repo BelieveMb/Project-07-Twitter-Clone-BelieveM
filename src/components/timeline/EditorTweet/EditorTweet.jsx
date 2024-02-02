@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import imageAvatar from  '../../../images/profile-photo.png';
+import imageAvatar from  '../../../../public/images/profile-photo.png';
 
 
-import imageMedia from "../../../images/Media.png";
-import imageGif from "../../../images/Gif.png";
-import imagePoll from "../../../images/Poll.png";
-import imageSmile from "../../../images/Emoji.png";
-import imageSchedule from "../../../images/Schedule.png";
+import imageMedia from "../../../../public/images/Media.png";
+import imageGif from "../../../../public/images/Gif.png";
+import imagePoll from "../../../../public/images/Poll.png";
+import imageSmile from "../../../../public/images/Emoji.png";
+import imageSchedule from "../../../../public/images/Schedule.png";
 import TweetContext from '../../../context/tweetContext';
 
 
