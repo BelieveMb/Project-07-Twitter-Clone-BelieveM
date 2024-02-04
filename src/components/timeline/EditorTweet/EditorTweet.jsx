@@ -37,11 +37,10 @@ function EditorTweet() {
       isLike: false,
       haveImage: false
     };
-    console.log("id  : ", newTweet.id)
     const updatedTweets = [...allData.tweets];
     updatedTweets.unshift(newTweet);
     setAllData({...allData, tweets : updatedTweets});
-    setInputValue(''); // Effacez le contenu de l'input après l'ajout du tweet
+    setInputValue(''); 
   };
 
   return (
