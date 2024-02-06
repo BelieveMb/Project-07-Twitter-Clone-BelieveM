@@ -12,8 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.7",
     "react-javascript": "file:",
-    "react-router-dom": "^6.20.1"
+    "react-router-dom": "^6.20.1",
+    "twitter-v2": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

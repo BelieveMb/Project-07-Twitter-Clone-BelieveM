@@ -26,7 +26,7 @@ function TweetBottom({comment, share, like}) {
     }
     
     const getAddLike = localStorage.getItem('addLike5');
-    console.log("le stock ",getAddLike)
+    // console.log("le stock ",getAddLike)
         
     
     

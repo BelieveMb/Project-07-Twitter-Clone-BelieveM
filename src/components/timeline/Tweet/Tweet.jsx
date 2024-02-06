@@ -5,6 +5,8 @@ import TweetBottom from "./TweetBottom";
 import TweetAvatar from "./TweetAvatar";
 import { Link, useParams } from 'react-router-dom';
 import TweetContext from '../../../context/tweetContext';
+import axios from 'axios'
+import TwitterApi from 'twitter-v2';
 
 
 function testImage(images, imageTweet){
@@ -56,6 +58,30 @@ const TweetsMap =({dataTweets}) => {
         </>
     )
 }
+const baseURL =  "https://jsonplaceholder.typicode.com/users/9";
+const baseURL2 =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
+    axios.get(baseURL2)
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    // axios.post(baseURL2, {
+    //         tweetTitle: 'Fred',
+    //         like: 20
+    //       })
+    //       .then(function (response) {
+    //         console.log(response);
+    //       })
+    //       .catch(function (error) {
+    //         console.log(error);
+    //       });
+   
+
+
+
 const TweetsUser = ({dataTweets}) => {
     const { id } = useParams();
     const tweets = dataTweets.tweets[id];
