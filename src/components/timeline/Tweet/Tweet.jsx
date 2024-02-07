@@ -107,7 +107,7 @@ const TweetsUser = ({dataTweets}) => {
 
 function Tweet(){
     const [apiData, setApiData] = useState([]);
-    const baseURL2 =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
+    const baseURL =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -155,24 +155,6 @@ function Tweet(){
             }
             </>
         )
-
-    // axios.post(baseURL2, {
-    //         tweetTitle: 'Fred',
-    //         like: 20
-    //       })
-    //       .then(function (response) {
-    //         console.log(response);
-    //       })
-    //       .catch(function (error) {
-    //         console.log(error);
-    //       });
-   
-    
-  
-
-   
-   
-    
 }
 
 export default Tweet;
