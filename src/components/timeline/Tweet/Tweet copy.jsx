@@ -106,55 +106,8 @@ const TweetsUser = ({dataTweets}) => {
 
 
 function Tweet(){
-    const [apiData, setApiData] = useState([]);
     const baseURL2 =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await axios.get('https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users');
-            setApiData(response.data);
-          } catch (error) {
-            console.error(error);
-          }
-        }
     
-          fetchData();
-        }, []);
-
-        return(
-            <>
-            {
-                apiData.map((tweets, index) => (
-                <div className="tweet" key={tweets.idUser}>
-                    <Link to={`/username/${tweets.idUser}`} >
-                        <TweetAvatar  imageAvatar={tweets.avatar} />
-                    </Link>
-    
-                    <div className="tweet-content" >
-                        <div className="tweet-title ">
-                            <Link to={`/username/${tweets.idUser}`} >
-                                <TweetTitle 
-                                    name={tweets.tweetTitle}
-                                    times={tweets.times}
-                                    hastag={tweets.hastag}
-                                />
-                            </Link>
-                        </div>
-                        <TweetBody content={tweets.content} />
-                        {testImage(tweets.images, tweets.images)}
-                        <div className="tweet-body">
-                            <TweetBottom 
-                                comment={tweets.comment} 
-                                share={tweets.retweet}
-                                like={tweets.like}
-                            />
-                        </div>
-                    </div>
-                </div>
-                ))
-            }
-            </>
-        )
 
     // axios.post(baseURL2, {
     //         tweetTitle: 'Fred',
@@ -167,12 +120,39 @@ function Tweet(){
     //         console.log(error);
     //       });
    
-    
-  
+
+
+    const {allData } = useContext(TweetContext);
+
+
+    const userOnlineId = allData.userOnline;
+    const [ selectUrl, setSelectUrl] = useState('');
+    useEffect(() => {
+        const currentUrl = window.location.pathname;
+        setSelectUrl(currentUrl);
+      }, []);
+
 
    
-   
     
+  
+    axios.get(baseURL2)
+      .then(response => {
+          console.log(response.data);
+          // <TweetsMap dataTweets={response.data} />
+      })
+      .catch(error => {
+          console.error(error);
+      })
+    return (
+        <>
+        
+        { selectUrl === '/' || selectUrl === ''
+            ? <TweetsMap dataTweets={allData} /> 
+            : <TweetsUser dataTweets={allData} /> 
+        }
+    </>
+    )
 }
 
 export default Tweet;
