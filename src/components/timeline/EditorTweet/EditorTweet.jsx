@@ -21,7 +21,9 @@ function EditorTweet() {
   });
   
   const {register, formState:{errors}, handleSubmit } = useForm();
-
+  const onSubmitForm = () => {
+    alert("data");
+   }
    
   useEffect(() => {
     const fetchData = async () => {
@@ -94,17 +96,18 @@ function EditorTweet() {
       <div className="avatar">
         <img src={imageAvatar} alt="image du profile" />
       </div>
-      <form onSubmit={handleSubmit(handleAddTweet)}  className="tweet-editor-form">
+      <form onSubmit={handleSubmit(onSubmitForm)}  className="tweet-editor-form">
         
         <input type="text" {...register('messageTweet', {
             minLength: { value: 3, message: "Votre tweet doit avoir plus de 3 caractères" },
             maxLength: { value: 20, message: "Votre doit avoir mois de 20 caractères" },
-            required : "remplir ce champs", pattern: /^[A-Za-z]+$/i })}
-          onChange={handleInputChange}  placeholder="What's happening" className="tweet-editor-input" />
-          {/* //  value={inputValue}  */}
+            required : "remplissez ce champs", pattern: /^[A-Za-z]+$/i })}
+            placeholder="What's  happening" className="tweet-editor-input" 
+         onChange={handleInputChange} value={inputValue}  />
          <span className="animate-pulse">
-            {errors.name && <span className="text-red-600"> {errors.name.message} </span>}
+            {errors.messageTweet && <span className="text-gray-50"> {errors.messageTweet.message} </span>}
         </span>
+        
         <div className="tweet-editor-buttons">
           <div className="tweet-editor-actions">
             <img src={imageMedia} alt="image du media" />
@@ -113,7 +116,8 @@ function EditorTweet() {
             <img src={imageSmile} alt="image du smile" />
             <img src={imageSchedule} alt="image du schedule" />
           </div>
-          <button className="button" type='submit'>Tweet</button>
+
+          <button className="button" onClick={handleAddTweet}>Tweet</button>
         </div>
       </form>
     </div>

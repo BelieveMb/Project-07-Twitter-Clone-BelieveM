@@ -4,6 +4,9 @@ import RightBar from '../components/rightbar/RightBar'
 import Layout from '../components/layout'
 
 function PageError() {
+
+
+   
   return (
     <>
       <SideBar />
