@@ -107,7 +107,8 @@ const TweetsUser = ({dataTweets}) => {
 
 function Tweet(){
     const [apiData, setApiData] = useState([]);
-    const baseURL =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
+    const baseURL =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users';
+
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -118,43 +119,46 @@ function Tweet(){
           }
         }
     
-          fetchData();
+          setInterval(fetchData, 100);
+           
         }, []);
+    const orderData = apiData.sort((a, b) => b.id - a.id);
+    console.log(orderData);
 
-        return(
-            <>
-            {
-                apiData.map((tweets, index) => (
-                <div className="tweet" key={tweets.idUser}>
-                    <Link to={`/username/${tweets.idUser}`} >
-                        <TweetAvatar  imageAvatar={tweets.avatar} />
-                    </Link>
-    
-                    <div className="tweet-content" >
-                        <div className="tweet-title ">
-                            <Link to={`/username/${tweets.idUser}`} >
-                                <TweetTitle 
-                                    name={tweets.tweetTitle}
-                                    times={tweets.times}
-                                    hastag={tweets.hastag}
-                                />
-                            </Link>
-                        </div>
-                        <TweetBody content={tweets.content} />
-                        {testImage(tweets.images, tweets.images)}
-                        <div className="tweet-body">
-                            <TweetBottom 
-                                comment={tweets.comment} 
-                                share={tweets.retweet}
-                                like={tweets.like}
+    return(
+        <>
+        {
+            orderData.map((tweets, index) => (
+            <div className="tweet" key={tweets.idUser}>
+                <Link to={`/username/${tweets.idUser}`} >
+                    <TweetAvatar  imageAvatar={tweets.avatar} />
+                </Link>
+
+                <div className="tweet-content" >
+                    <div className="tweet-title ">
+                        <Link to={`/username/${tweets.idUser}`} >
+                            <TweetTitle 
+                                name={tweets.tweetTitle}
+                                times={tweets.times}
+                                hastag={tweets.hastag}
                             />
-                        </div>
+                        </Link>
+                    </div>
+                    <TweetBody content={tweets.content} />
+                    {testImage(tweets.images, tweets.images)}
+                    <div className="tweet-body">
+                        <TweetBottom 
+                            comment={tweets.comment} 
+                            share={tweets.retweet}
+                            like={tweets.like}
+                        />
                     </div>
                 </div>
-                ))
-            }
-            </>
-        )
+            </div>
+            ))
+        }
+        </>
+    )
 }
 
 export default Tweet;

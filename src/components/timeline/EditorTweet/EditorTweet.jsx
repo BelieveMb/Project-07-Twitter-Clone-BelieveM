@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import imageAvatar from  '../../../../public/images/profile-photo.png';
 import axios from 'axios'
 
@@ -12,9 +12,23 @@ import TweetContext from '../../../context/tweetContext';
 
 
 function EditorTweet() {
-  const {allData, setAllData} = useContext(TweetContext);
+  // const {allData, setAllData} = useContext(TweetContext);
+  const [apiData, setApiData] = useState([]);
   const [inputValue, setInputValue] = useState('');
    
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users');
+        setApiData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+      fetchData();
+    }, []);
+
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -24,7 +38,7 @@ function EditorTweet() {
 
   const handleAddTweet = () => {
     axios.post(baseURL, {
-        id: allData.tweets.length + 1,
+        id: apiData.length + 1,
         content: inputValue,
         idUser: 1,
         tweetTitle : "Brady Ortiz ",
@@ -43,6 +57,9 @@ function EditorTweet() {
       .catch(function (error) {
         console.log(error);
       });
+    setInputValue(''); 
+    // location.reload();
+  
     const newTweet = {
       id: allData.tweets.length + 1,
       content: inputValue,
@@ -59,10 +76,10 @@ function EditorTweet() {
       isLike: false,
       haveImage: false
     };
-    const updatedTweets = [...allData.tweets];
-    updatedTweets.unshift(newTweet);
-    setAllData({...allData, tweets : updatedTweets});
-    setInputValue(''); 
+    // const updatedTweets = [...allData.tweets];
+    // updatedTweets.unshift(newTweet);
+    // setApiData({...allData, tweets : updatedTweets});
+
   };
 
   return (
