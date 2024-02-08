@@ -15,6 +15,8 @@ export default function App() {
 
   const [allData, setAllData] = useState(data);
   const [addTweet, setAddTweet] = useState([]);
+  const [addLike, setAddLike] = useState();
+
   const userOnline = 1;
   // const addNewTweets = (newTweet) => {
   //   setAddTweet([...addTweet, newTweet]);
@@ -22,7 +24,7 @@ export default function App() {
   return (
     <BrowserRouter>
         <TweetContext.Provider value={{
-            allData,setAllData, userOnline, addTweet
+            allData,setAllData, userOnline, addTweet, addLike, setAddLike
           }}>
           <Routes>
               <Route path="/" element={

@@ -12,7 +12,7 @@ function PageError() {
             </Layout>
       <RightBar />
     </>
-  )
+  ) 
 }
 
 export default PageError
