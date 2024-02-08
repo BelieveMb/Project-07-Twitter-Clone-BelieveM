@@ -1,5 +1,5 @@
 import React from 'react';
-import { UsersList } from '../data/Tweets';
+import { UsersList } from '../../data/Tweets';
 import Button from '../freeComponents/Button';
 import { NavLink } from 'react-router-dom';
 

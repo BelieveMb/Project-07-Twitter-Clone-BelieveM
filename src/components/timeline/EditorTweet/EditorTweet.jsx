@@ -9,12 +9,19 @@ import imagePoll from "../../../../public/images/Poll.png";
 import imageSmile from "../../../../public/images/Emoji.png";
 import imageSchedule from "../../../../public/images/Schedule.png";
 import TweetContext from '../../../context/tweetContext';
+import { useForm } from 'react-hook-form';
 
 
 function EditorTweet() {
   // const {allData, setAllData} = useContext(TweetContext);
   const [apiData, setApiData] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const [formData, setFormData] = useState({
+    messageTweet : ""
+  });
+  
+  const {register, formState:{errors}, handleSubmit } = useForm();
+
    
   useEffect(() => {
     const fetchData = async () => {
@@ -29,14 +36,14 @@ function EditorTweet() {
       fetchData();
     }, []);
 
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
   const baseURL =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
 
 
-  const handleAddTweet = () => {
+  const handleAddTweet = (event) => {
+    event.preventDefault()
     axios.post(baseURL, {
         id: apiData.length + 1,
         content: inputValue,
@@ -87,8 +94,17 @@ function EditorTweet() {
       <div className="avatar">
         <img src={imageAvatar} alt="image du profile" />
       </div>
-      <div className="tweet-editor-form">
-        <input type="text"  value={inputValue} onChange={handleInputChange}  placeholder="What's happening" className="tweet-editor-input" />
+      <form onSubmit={handleSubmit(handleAddTweet)}  className="tweet-editor-form">
+        
+        <input type="text" {...register('messageTweet', {
+            minLength: { value: 3, message: "Votre tweet doit avoir plus de 3 caractères" },
+            maxLength: { value: 20, message: "Votre doit avoir mois de 20 caractères" },
+            required : "remplir ce champs", pattern: /^[A-Za-z]+$/i })}
+          onChange={handleInputChange}  placeholder="What's happening" className="tweet-editor-input" />
+          {/* //  value={inputValue}  */}
+         <span className="animate-pulse">
+            {errors.name && <span className="text-red-600"> {errors.name.message} </span>}
+        </span>
         <div className="tweet-editor-buttons">
           <div className="tweet-editor-actions">
             <img src={imageMedia} alt="image du media" />
@@ -97,9 +113,9 @@ function EditorTweet() {
             <img src={imageSmile} alt="image du smile" />
             <img src={imageSchedule} alt="image du schedule" />
           </div>
-          <button className="button" onClick={handleAddTweet}>Tweet</button>
+          <button className="button" type='submit'>Tweet</button>
         </div>
-      </div>
+      </form>
     </div>
   )
 }
