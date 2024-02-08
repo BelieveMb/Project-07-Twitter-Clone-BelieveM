@@ -119,11 +119,10 @@ function Tweet(){
           }
         }
     
-          setInterval(fetchData, 100);
+          setInterval(fetchData, 3000);
            
         }, []);
     const orderData = apiData.sort((a, b) => b.id - a.id);
-    console.log(orderData);
 
     return(
         <>

@@ -58,7 +58,6 @@ function EditorTweet() {
         console.log(error);
       });
     setInputValue(''); 
-    // location.reload();
   
     const newTweet = {
       id: allData.tweets.length + 1,
