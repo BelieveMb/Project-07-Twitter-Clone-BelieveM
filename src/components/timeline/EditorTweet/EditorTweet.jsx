@@ -13,7 +13,6 @@ import { useForm } from 'react-hook-form';
 
 
 function EditorTweet() {
-  // const {allData, setAllData} = useContext(TweetContext);
   const [apiData, setApiData] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [formData, setFormData] = useState({
@@ -49,7 +48,7 @@ function EditorTweet() {
     axios.post(baseURL, {
         id: apiData.length + 1,
         content: inputValue,
-        idUser: 1,
+        idUser: apiData.length + 1,
         tweetTitle : "Brady Ortiz ",
         hastag: "@Brady Ortiz. ",
         avatar: imageAvatar,
@@ -68,25 +67,6 @@ function EditorTweet() {
       });
     setInputValue(''); 
   
-    const newTweet = {
-      id: allData.tweets.length + 1,
-      content: inputValue,
-      idUser: 1,
-      tweetTitle : "Brady Ortiz ",
-      hastag: "@Brady Ortiz. ",
-      avatar: imageAvatar,
-      times: 'now',
-      createdAt: new Date(),
-      tweetId: 1,
-      comment: 0,
-      retweet: 0,
-      like: 0,
-      isLike: false,
-      haveImage: false
-    };
-    // const updatedTweets = [...allData.tweets];
-    // updatedTweets.unshift(newTweet);
-    // setApiData({...allData, tweets : updatedTweets});
 
   };
 
@@ -101,9 +81,10 @@ function EditorTweet() {
         <input type="text" {...register('messageTweet', {
             minLength: { value: 3, message: "Votre tweet doit avoir plus de 3 caractères" },
             maxLength: { value: 20, message: "Votre doit avoir mois de 20 caractères" },
-            required : "remplissez ce champs", pattern: /^[A-Za-z]+$/i })}
-            placeholder="What's  happening" className="tweet-editor-input" 
-         onChange={handleInputChange} value={inputValue}  />
+            required : "remplissez ce champs" })}
+            placeholder="What's  happening" className="tweet-editor-input"   autoComplete='off'
+            />
+         {/* onChange={handleInputChange} value={inputValue}  */}
          <span className="animate-pulse">
             {errors.messageTweet && <span className="text-gray-50"> {errors.messageTweet.message} </span>}
         </span>
@@ -117,7 +98,8 @@ function EditorTweet() {
             <img src={imageSchedule} alt="image du schedule" />
           </div>
 
-          <button className="button" onClick={handleAddTweet}>Tweet</button>
+          {/* <button className="button" onClick={handleAddTweet} type='submit'>Tweet</button> */}
+          <button className="button"  type='submit'>Tweet</button>
         </div>
       </form>
     </div>

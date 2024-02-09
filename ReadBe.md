@@ -31,3 +31,19 @@
         -we use twitter-v2 -> npm install twitter-v2
     -create a post request
     -create a put request
+ const userOnlineId = allData.userOnline;
+    const [ selectUrl, setSelectUrl] = useState('');
+    useEffect(() => {
+        const currentUrl = window.location.pathname;
+        setSelectUrl(currentUrl);
+      }, []);
+
+    return (
+        <>
+        
+        { selectUrl === '/' || selectUrl === ''
+            ? <TweetsMap dataTweets={allData} /> 
+            : <TweetsUser dataTweets={allData} /> 
+        }
+    </>
+    )
