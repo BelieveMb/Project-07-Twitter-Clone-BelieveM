@@ -20,8 +20,8 @@ function EditorTweet() {
   });
   
   const {register, formState:{errors}, handleSubmit } = useForm();
-  const onSubmitForm = () => {
-    alert("data");
+  const onSubmitForm = (data) => {
+    alert(data)
    }
    
   useEffect(() => {
@@ -42,12 +42,14 @@ function EditorTweet() {
   };
   const baseURL =  'https://65c20c3ff7e6ea59682a7c59.mockapi.io/tweets/users'
 
-
-  const handleAddTweet = (event) => {
-    event.preventDefault()
+  const handleAddTweet = (data) => {
+    const messageTweetValue = data.messageTweet;
+    let messageTweetInput = document.getElementById('messageTweetInput')
+    
+    // event.preventDefault()
     axios.post(baseURL, {
         id: apiData.length + 1,
-        content: inputValue,
+        content: messageTweetValue,
         idUser: apiData.length + 1,
         tweetTitle : "Brady Ortiz ",
         hastag: "@Brady Ortiz. ",
@@ -61,11 +63,13 @@ function EditorTweet() {
       })
       .then(function (response) {
         console.log(response);
+        alert("Ajouter")
       })
       .catch(function (error) {
         console.log(error);
       });
-    setInputValue(''); 
+    // setInputValue(''); 
+    messageTweetInput.value = ""
   
 
   };
@@ -76,15 +80,15 @@ function EditorTweet() {
       <div className="avatar">
         <img src={imageAvatar} alt="image du profile" />
       </div>
-      <form onSubmit={handleSubmit(onSubmitForm)}  className="tweet-editor-form">
+      <form onSubmit={handleSubmit(handleAddTweet)}  className="tweet-editor-form">
         
         <input type="text" {...register('messageTweet', {
             minLength: { value: 3, message: "Votre tweet doit avoir plus de 3 caractères" },
             maxLength: { value: 20, message: "Votre doit avoir mois de 20 caractères" },
             required : "remplissez ce champs" })}
-            placeholder="What's  happening" className="tweet-editor-input"   autoComplete='off'
-            />
-         {/* onChange={handleInputChange} value={inputValue}  */}
+            placeholder="What's  happening" className="tweet-editor-input"   autoComplete='off'   id="messageTweetInput"         
+        />
+             {/* value={inputValue} onChange={handleInputChange}  */}
          <span className="animate-pulse">
             {errors.messageTweet && <span className="text-gray-50"> {errors.messageTweet.message} </span>}
         </span>
